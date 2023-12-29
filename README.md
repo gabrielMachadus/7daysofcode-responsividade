@@ -8,3 +8,7 @@ Modelo objetivo:
 Tarefa Extra (Não obrigatória):
 Adicionar funcionalidade no botão, onde quando for clicado
 ![image](https://github.com/gabrielMachadus/7daysofcode-responsividade/assets/15897575/d9c58116-f1a3-4436-9595-cf0b31abd9de)
+
+
+Modelo finalizado:
+![image](https://github.com/gabrielMachadus/7daysofcode-responsividade/assets/15897575/fc06244b-6b48-4536-978b-d1c192c09cf7)
