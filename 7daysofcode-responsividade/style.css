@@ -3,8 +3,7 @@ body,button,p{
     
 }
 body{
-  
-    background: #FFF;
+    background-color: gainsboro;
 }
 
 button {
@@ -37,7 +36,8 @@ svg.menu-footer {
     background-color: white;
     color: black;
     text-align: left;
-    border-bottom: 1px solid black;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
 }
 
 .cabecalho-topo {
@@ -74,6 +74,9 @@ svg.menu-footer {
     border: 0;
     width: 100%;
 }
+.agenda-bloco:hover{
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+}
 
 .agenda-tipo-consulta{
     display: flex;
@@ -81,6 +84,11 @@ svg.menu-footer {
     padding-left: 30px;
     padding-right: 30px;
 }
+
+.agenda-tipo-consulta svg {
+    padding-right: 20px;
+}
+
 
 .agenda-corpo {
     padding: 5px;
@@ -109,6 +117,8 @@ svg.menu-footer {
 
 .btn-endereco {
     background-color: #4894FF;
+    color:white;
+    border: none;
 }
 
 
@@ -122,8 +132,8 @@ svg.menu-footer {
 
 .btn-menu-novo {
     position: fixed;
-    right: 50px;
-    bottom: 100px;
+    right: 10px;
+    bottom: 60px;
     border-radius: 50%;
     text-align: center;
     align-items: center;
@@ -132,7 +142,11 @@ svg.menu-footer {
     width: 50px;
     height: 50px;
     color: white;
-    box-shadow: 0px 0px 10px rgba(18, 131, 196, 0.959);;
+    box-shadow: 0px 0px 10px rgba(18, 131, 196, 0.959);
+}
+
+.btn-menu-novo :hover{
+    box-shadow: 0px 0px 10px rgba(9, 38, 54, 0.705);
 }
 
 .footer {
@@ -144,10 +158,16 @@ svg.menu-footer {
     font-size: 10vh;
     background-color: white;
     color: white;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
 }
 
 .menu-footer{
     display: flex;
     
     justify-content: space-evenly;
+}
+
+.fundo-escuro-transparente{
+    background-color: #00000025;
 }
