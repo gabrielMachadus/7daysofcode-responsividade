@@ -1,8 +1,10 @@
-body,button,p{
+body,
+button,
+p, input,select {
     font-family: Montserrat;
-    
 }
-body{
+
+body {
     background-color: gainsboro;
 }
 
@@ -14,16 +16,30 @@ button {
     width: auto;
 }
 
+input,select,textarea {
+    display: inline;
+    height: 50px;
+    padding-left: 15px;
+    width: 100%;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid #464646;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
 svg.menu-footer {
     display: block;
     margin-right: 10px;
 }
 
-.fundo{
-    padding-top:15vh;
-    padding-bottom:15vh;
-    display: flex;
+.fundo {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    display: block;
+    overflow-x: hidden;
     justify-content: center;
+    justify-items: center;
     background-color: gainsboro;
     height: max-content;
 }
@@ -56,7 +72,7 @@ svg.menu-footer {
 
 .consultas {
     margin: 10px;
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
 
@@ -68,17 +84,19 @@ svg.menu-footer {
 .agenda-bloco {
     background-color: white;
     margin: 10px;
+    max-width: 480px;
     padding: 10px;
     border-radius: 10px;
     height: auto;
     border: 0;
     width: 100%;
 }
-.agenda-bloco:hover{
-     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+
+.agenda-bloco:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
 }
 
-.agenda-tipo-consulta{
+.agenda-tipo-consulta {
     display: flex;
     flex-direction: row;
     padding-left: 30px;
@@ -105,19 +123,19 @@ svg.menu-footer {
     flex-shrink: 0;
 }
 
-.btn-msg{
+.btn-msg {
     float: right;
 }
 
-.btn-video {
-    background-color: #FFB050;
-    color:white;
+.btn-primario {
+    background-color: #4894FF;
+    color: white;
     border: none;
 }
 
-.btn-endereco {
-    background-color: #4894FF;
-    color:white;
+.btn-secundario {
+    background-color: #FFB050;
+    color: white;
     border: none;
 }
 
@@ -145,12 +163,9 @@ svg.menu-footer {
     box-shadow: 0px 0px 10px rgba(18, 131, 196, 0.959);
 }
 
-.btn-menu-novo :hover{
-    box-shadow: 0px 0px 10px rgba(9, 38, 54, 0.705);
-}
 
 .footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -162,12 +177,36 @@ svg.menu-footer {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
 }
 
-.menu-footer{
+.menu-footer {
     display: flex;
-    
     justify-content: space-evenly;
 }
 
-.fundo-escuro-transparente{
+.fundo-escuro-transparente {
     background-color: #00000025;
+}
+
+.active {
+    color: #4894FF;
+}
+
+#formulario {
+    display: none;
+}
+
+@media (min-width:850px) {
+    .btn-menu-novo {
+        display: none;
+    }
+
+    #formulario {
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        justify-items: center;
+        margin: 2%;
+        padding: 30px;
+        color: black;
+        display: block;
+    }
 }
