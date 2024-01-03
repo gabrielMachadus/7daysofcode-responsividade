@@ -1,0 +1,233 @@
+body,
+button,
+p,
+input,
+select {
+    font-family: Montserrat;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+button {
+    display: inline-flex;
+    border: none;
+    background-color: white;
+    padding: 10px;
+    width: auto;
+}
+
+input,
+select,
+textarea {
+    display: inline;
+    height: 50px;
+    padding-left: 15px;
+    width: 100%;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid #464646;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+svg.menu-footer {
+    display: block;
+    margin-right: 10px;
+}
+
+.fundo {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    display: block;
+    overflow-x: hidden;
+    justify-content: center;
+    justify-items: center;
+    background-color: gainsboro;
+    height: max-content;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: left;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
+}
+
+.cabecalho-topo {
+    margin-right: 30px;
+    color: #464646;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+.cabecalho-detalhe {
+    margin-right: 30px;
+}
+
+.consultas-dia {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.agenda-cabecalho {
+    padding: 5px;
+}
+
+.agenda-bloco {
+    background-color: white;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    height: auto;
+    border: 0;
+    min-height: 280px;
+}
+
+.agenda-bloco:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+}
+
+.agenda-tipo-consulta {
+    display: flex;
+    align-items: center;
+    /*flex-direction: row;*/
+    /*padding-left: 30px;*/
+    padding-right: 30px;
+}
+
+svg.agenda-tipo-consulta  {
+    /*padding-right: 20px;*/
+    width: 28px;
+    height: auto;
+    /*margin-right: 20px;*/
+}
+
+
+.agenda-corpo {
+    padding: 5px;
+    border-top: 1px solid #464646;
+    align-content: space-evenly;
+}
+
+.btn {
+    display: inline;
+    text-align: center;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+    height: 48px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.btn-msg {
+    float: right;
+}
+
+.btn-primario {
+    background-color: #4894FF;
+    color: white;
+    border: none;
+}
+
+.btn-secundario {
+    background-color: #FFB050;
+    color: white;
+    border: none;
+}
+
+
+.profile {
+    border-radius: 50%;
+    height: 100px;
+    display: inline-flex;
+    float: left;
+    margin: 30px;
+}
+
+.btn-menu-novo {
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(18, 131, 196, 0.959);
+    width: 50px;
+    height: 50px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(18, 131, 196, 0.959);
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    font-size: 10vh;
+    background-color: white;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
+}
+
+.menu-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fundo-escuro-transparente {
+    background-color: #00000025;
+}
+
+.active {
+    color: #4894FF;
+}
+
+strong.dia {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#formulario {
+    display: none;
+}
+
+@media (min-width:850px) {
+    .btn-menu-novo {
+        display: none;
+    }
+
+    #formulario {
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        justify-items: center;
+        margin: 2%;
+        padding: 30px;
+        color: black;
+        display: block;
+    }
+
+
+
+    .consultas-dia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
