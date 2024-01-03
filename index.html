@@ -8,14 +8,14 @@
 </head>
 
 <body>
+    <header class="header">
+        <img class="profile" src="imagens/sonia.png" />
+        <h1 class="cabecalho-topo">Olá, Kléia</h1>
+        <p class="cabecalho-detalhe">Mais 4 consultas hoje</p>
+    </header>
     <main class="fundo">
-        <section class="header">
-            <img class="profile" src="imagens/sonia.png" />
-            <h1 class="cabecalho-topo">Olá, Kléia</h1>
-            <p class="cabecalho-detalhe">Mais 4 consultas hoje</p>
-        </section>
-        <section class="consultas">
-            <strong>Hoje</strong>
+        <div class="consultas-dia">
+            <strong class="dia">Hoje</strong>
             <div class="agenda-bloco">
                 <div class="agenda-cabecalho">
                     <img src="imagens/luciana.png" width="auto">
@@ -140,10 +140,10 @@
                     <button class="btn">Ligar por áudio</button>
                 </div>
             </div>
+        </div>
 
-
-
-            <strong>Amanhã</strong>
+        <div class="consultas-dia">
+            <strong class="dia">Amanhã</strong>
             <div class="agenda-bloco">
                 <div class="agenda-cabecalho">
                     <img src="imagens/clara.png" width="auto">
@@ -267,7 +267,8 @@
                     <button class="btn btn-secundario">Ver endereço</button>
                 </div>
             </div>
-        </section>
+        </div>
+
 
 
         <section id="formulario">
@@ -275,7 +276,7 @@
             <p>Nome do Paciente: <input id="form_nome_paciente" type="text" required></p>
             <p>Tipo da Consulta:
                 <select id="form_tipo_consulta" required>
-                    <option value="selecione" >Selecione uma opção</option>
+                    <option value="selecione">Selecione uma opção</option>
                     <option value="consulta_remota">Consulta Remota</option>
                     <option value="consulta_presencial">Consulta Presencial</option>
                 </select>
@@ -284,10 +285,11 @@
                 Observações: <textarea cols="30" rows="20" id="form_observacoes" required></textarea>
             </p>
             <p>Data da Consulta: <input type="date" id="form_data_consulta" required></p>
-            
+
             <p>Hora da Consulta: <input type="time" id="form_horario_consulta" required></p>
 
-            <button id="btn_enviar_dados_formulario" class="btn btn-primario" onclick="salvar();"> Salvar nova consulta</button>
+            <button id="btn_enviar_dados_formulario" class="btn btn-primario" onclick="salvar();"> Salvar nova
+                consulta</button>
         </section>
 
         <button class="btn-menu-novo">
@@ -301,38 +303,38 @@
     </main>
 
     <script>
-        function  validar_dados(){
-           let nome =  document.getElementById('form_nome_paciente').value;
-           let tipo_consulta =  document.getElementById('form_tipo_consulta').value;
-           let observacoes =  document.getElementById('form_observacoes').value;
-           let data_consulta =  document.getElementById('form_data_consulta').value;
-           let horario_consulta =  document.getElementById('form_horario_consulta').value;
+        function validar_dados() {
+            let nome = document.getElementById('form_nome_paciente').value;
+            let tipo_consulta = document.getElementById('form_tipo_consulta').value;
+            let observacoes = document.getElementById('form_observacoes').value;
+            let data_consulta = document.getElementById('form_data_consulta').value;
+            let horario_consulta = document.getElementById('form_horario_consulta').value;
 
-           let dados  = {
-                "nome":nome,
-                "tipo_consulta":tipo_consulta,
-                "observacoes":observacoes,
-                "data_consulta":data_consulta,
-                "horario_consulta":horario_consulta
-           };
+            let dados = {
+                "nome": nome,
+                "tipo_consulta": tipo_consulta,
+                "observacoes": observacoes,
+                "data_consulta": data_consulta,
+                "horario_consulta": horario_consulta
+            };
 
-           for (let chave in dados ){
-             if(dados[chave]==""){
-                console.log('valor vazio encontrado em '+chave);
-             }else{
-                console.log('valor encontrado'+dados[chave]+' em '+chave);
-             }
-           }
+            for (let chave in dados) {
+                if (dados[chave] == "") {
+                    console.log('valor vazio encontrado em ' + chave);
+                } else {
+                    console.log('valor encontrado' + dados[chave] + ' em ' + chave);
+                }
+            }
 
-           console.log(dados);
+            console.log(dados);
 
-           console.log(nome);
-           console.log(tipo_consulta);
-           console.log(observacoes);
-           console.log(data_consulta);
-           console.log(horario_consulta);
+            console.log(nome);
+            console.log(tipo_consulta);
+            console.log(observacoes);
+            console.log(data_consulta);
+            console.log(horario_consulta);
         }
-        function salvar(){
+        function salvar() {
             validar_dados();
             //alert("Consulta cadastrada com sucesso!");
         }
